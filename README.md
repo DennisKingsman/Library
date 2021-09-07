@@ -110,3 +110,148 @@ PL/SQL,
 Trigger, Index, Constraint, Foreign Key,  
 Partitioning  
 ## Chapter 51
+Oracle  
+## Chapter 52 
+PostgreSQL: json/jsonb, replication, pgbouncer/pgpool/patroni, Partitioning, ts_vector  
+## Chapter 53
+MS SQL  
+## Chapter 54 
+sybase  
+## Chapter 55
+H2  
+## Chapter 56
+SQLite  
+## Chapter 57
+ClickHouse  
+## Chapter 58
+ElasticSearch  
+## Chapter 59
+graphDB  
+## Chapter 60 
+Apache Cassandra/ScyllaDB  
+## Chapter 61
+Redis  
+## Chapter 62
+Tarantool  
+## Chapter 63
+Hazelcast  
+## Chapter 64
+MCS  
+## Chapter 65
+Patterns:  
+circuit breaker,  
+lockAndRead,  
+api-gateway,  
+data replication,  
+configmap-notification  
+## Chapter 66
+Apache Kafka: broker, streams, strategy  
+## Chapter 67
+
+## Chapter 68
+ 
+## Chapter 69
+IBM MQ
+## Chapter 70
+Drivers:  
+jUnit4, Jupiter, TestNG  
+## Chapter 71
+Mockito, Powermock  
+## Chapter 72
+Assertion: Harmcrest, Assertj  
+## Chapter 73 
+Testcontainers  
+## Chapter 74
+Git  
+## Chapter 75 
+
+## Chapter 76
+ 
+## Chapter 77
+SoapUI/Postman  
+## Chapter 78
+JMeter  
+## Chapter 79
+Jira  
+## Chapter 80
+
+## Chapter 81
+ 
+## Chapter 82
+Отладка:  
+jmap,  
+jstack,  
+jProfiler,  
+Memory Analyzer,  
+VisualVM  
+## Chapter 83
+HTML/CSS  
+## Chapter 84
+ 
+## Chapter 85
+BlockChain, MashineLearning  
+## Chapter 86
+BPM  
+BPMN  
+## Chapter 87
+
+## Chapter 88
+
+## Chapter 89
+
+## Chapter 90
+
+## Chapter 91
+
+## Chapter 92
+
+## Chapter 93
+Tomcat  
+## Chapter 94
+Jetty  
+## Chapter 95
+ 
+## Chapter 96
+Docker  
+## Chapter 97
+K8S, helm, minikube  
+## Chapter 98
+OpenShift  
+## Chapter 99
+JMX  
+## Chapter 100
+ 
+## Chapter 101
+CI/CD  
+GitLab  
+## Chapter 102
+Jenkins  
+## Chapter 103
+
+## Chapter 104
+Apache Commons Lang  
+## Chapter 105
+Guava  
+## Chapter 106
+Lombok  
+## Chapter 107 
+itext, apachePOI, jasperReport, PdfConv  
+## Chapter 108
+Liquibase  
+## Chapter 109
+Flyway  
+## Chapter 110 
+Maven  
+## Chapter 111
+CCCC  
+## Chapter 112
+Scrum  
+## Chapter 113
+GitFlow  
+## Chapter 114
+
+## Chapter 115
+
+## Chapter 116
+
+## Chapter 110
