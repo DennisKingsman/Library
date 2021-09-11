@@ -3,7 +3,16 @@
 # Contents
 ## Chapter 1 
 OOP base, SOLID, ACID, design-patterns  
-[you-tube-design-patterns-guide](https://www.youtube.com/playlist?list=PLF206E906175C7E07)
+[you-tube-design-patterns-guide](https://www.youtube.com/playlist?list=PLF206E906175C7E07)  
+Strategy  
+The first rule: you do not need to add methods to super classes that will be useless for at least one child class.  
+The second rule: avoid situations that lead to code duplication.  
+The essence of the "Strategy"pattern:  
+A strategy is a `behavioral` design pattern that defines a family of similar algorithms and puts each of them in its own class, after which the algorithms can be interchanged right during program execution. These classes can implement an interface that assumes a certain behavior, but use their own unique algorithms for this behavior.  
+Negatives: increased number of classes  
+Observer  
+The Observer pattern is a `behavioral` design pattern. It allows you to notify a set of objects, so-called Listeners (or Subscribers), about a change in the state of some other Subject (or Publisher) object.  
+Nagatives: The Subject (publisher) may send updates that don't matter to the Observer (subscriber).  
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
