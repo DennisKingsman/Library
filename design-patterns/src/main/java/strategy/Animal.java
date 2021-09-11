@@ -25,34 +25,57 @@ public class Animal {
 
     public Flyable flyingType;
 
-    public void setName(String newName){ name = newName; }
+    public void setName(String newName) {
+        name = newName;
+    }
 
-    public String getName(){ return name; }
+    public String getName() {
+        return name;
+    }
 
-    public void setHeight(double newHeight){ height = newHeight; }
+    public void setHeight(double newHeight) {
+        height = newHeight;
+    }
 
-    public double getHeight(){ return height; }
+    public double getHeight() {
+        return height;
+    }
 
-    public void setWeight(int newWeight){
-        if (newWeight > 0){
+    public void setWeight(int newWeight) {
+        if (newWeight > 0) {
             weight = newWeight;
         } else {
             System.out.println("Weight must be bigger than 0");
         }
     }
-    public double getWeight(){ return weight; }
 
-    public void setFavFood(String newFavFood){ favFood = newFavFood; }
+    public double getWeight() {
+        return weight;
+    }
 
-    public String getFavFood(){ return favFood; }
+    public void setFavFood(String newFavFood) {
+        favFood = newFavFood;
+    }
 
-    public void setSpeed(double newSpeed){ speed = newSpeed; }
+    public String getFavFood() {
+        return favFood;
+    }
 
-    public double getSpeed(){ return speed; }
+    public void setSpeed(double newSpeed) {
+        speed = newSpeed;
+    }
 
-    public void setSound(String newSound){ sound = newSound; }
+    public double getSpeed() {
+        return speed;
+    }
 
-    public String getSound(){ return sound; }
+    public void setSound(String newSound) {
+        sound = newSound;
+    }
+
+    public String getSound() {
+        return sound;
+    }
 
 	/* BAD
 	* You don't want to add methods to the super class.
@@ -65,14 +88,14 @@ public class Animal {
 
     // Animal pushes off the responsibility for flying to flyingType
 
-    public String tryToFly(){
+    public String tryToFly() {
         return flyingType.fly();
     }
 
     // If you want to be able to change the flyingType dynamically
     // add the following method
 
-    public void setFlyingAbility(Flyable newFlyType){
+    public void setFlyingAbility(Flyable newFlyType) {
         flyingType = newFlyType;
     }
 

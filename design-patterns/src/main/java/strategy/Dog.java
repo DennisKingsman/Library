@@ -1,12 +1,12 @@
 package strategy;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
 
-    public void digHole(){
+    public void digHole() {
         System.out.println("Dug a hole");
     }
 
-    public Dog(){
+    public Dog() {
         super();
         setSound("Bark");
         // We set the Flys interface polymorphically
