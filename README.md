@@ -22,8 +22,15 @@ Nagatives: The Subject (publisher) may send updates that don't matter to the Obs
 The scope in Java that uses the Observer template is the Java Message Service (JMS).  
 [java-observer-pattern](https://www.baeldung.com/java-observer-pattern)  
 Factory  
-A factory is a design pattern that helps solve the problem of creating different objects depending on certain conditions. (Generating pattern.)  
+A factory is a design pattern that helps solve the problem of creating different objects depending on certain conditions. (`Generating` pattern.)  
 Uses when the method return one of the several possible classes that share a common super class.  
+Abstract Factory  
+It is like the Factory pattern but everything is encapsulated:  
+The method that orders the object  
+The factories that build the object  
+The final object  
+The final objects contains objects that use the Strategy Pattern  
+It's a factory of factories  
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
