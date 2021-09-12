@@ -31,6 +31,24 @@ The factories that build the object
 The final object  
 The final objects contains objects that use the Strategy Pattern  
 It's a factory of factories  
+Singleton  
+
+
+
+Builder  
+
+
+
+Prototype  
+
+
+
+
+Decorater  
+
+
+
+
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
