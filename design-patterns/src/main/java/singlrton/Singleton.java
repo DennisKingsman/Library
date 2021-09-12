@@ -17,14 +17,15 @@ public class Singleton {
             "r", "r", "s", "s", "s", "s", "t", "t", "t", "t", "t", "t", "u",
             "u", "u", "u", "v", "v", "w", "w", "x", "y", "y", "z",};
 
-    private LinkedList<String> letterList = new LinkedList<String> (Arrays.asList(scrabbleLetters));
+    private LinkedList<String> letterList = new LinkedList<String>(Arrays.asList(scrabbleLetters));
 
     // Used to slow down 1st thread
     static boolean firstThread = true;
 
     // Created to keep users from instantiation
     // Only Singleton will be able to instantiate this class
-    private Singleton() { }
+    private Singleton() {
+    }
 
     // We could make getInstance a synchronized method to force
     // every thread to wait its turn. That way only one thread
@@ -33,11 +34,11 @@ public class Singleton {
     // public static synchronized Singleton getInstance()
 
     public static Singleton getInstance() {
-        if(firstInstance == null) {
+        if (firstInstance == null) {
 
             // This is here to test what happens if threads try
             // to create instances of this class
-            if(firstThread){
+            if (firstThread) {
                 firstThread = false;
                 try {
                     Thread.currentThread();
@@ -49,8 +50,8 @@ public class Singleton {
 
             // Here we just use synchronized when the first object
             // is created
-            synchronized(Singleton.class){
-                if(firstInstance == null) {
+            synchronized (Singleton.class) {
+                if (firstInstance == null) {
                     // If the instance isn't needed it isn't created
                     // This is known as lazy instantiation
                     firstInstance = new Singleton();
@@ -63,18 +64,18 @@ public class Singleton {
         return firstInstance;
     }
 
-    public LinkedList<String> getLetterList(){
+    public LinkedList<String> getLetterList() {
         return firstInstance.letterList;
     }
 
-    public LinkedList<String> getTiles(int howManyTiles){
+    public LinkedList<String> getTiles(int howManyTiles) {
         // Tiles to be returned to the user
         LinkedList<String> tilesToSend = new LinkedList<String>();
 
         // Cycle through the LinkedList while adding the starting
         // Strings to the to be returned LinkedList while deleting
         // them from letterList
-        for(int i = 0; i <= howManyTiles; i++){
+        for (int i = 0; i <= howManyTiles; i++) {
             tilesToSend.add(firstInstance.letterList.remove(0));
         }
         // Return the number of letter tiles requested

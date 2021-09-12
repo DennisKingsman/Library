@@ -7,12 +7,12 @@ public class RobotEngineer {
     private RobotBuilder robotBuilder;
 
     // OldRobotBuilder specification is sent to the engineer
-    public RobotEngineer(RobotBuilder robotBuilder){
+    public RobotEngineer(RobotBuilder robotBuilder) {
         this.robotBuilder = robotBuilder;
     }
 
     // Return the Robot made from the OldRobotBuilder spec
-    public Robot getRobot(){
+    public Robot getRobot() {
         return this.robotBuilder.getRobot();
     }
 

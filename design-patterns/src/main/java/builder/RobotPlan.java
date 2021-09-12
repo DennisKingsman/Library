@@ -1,7 +1,7 @@
 package builder;
 
 // This is the interface that will be returned from the builder
-public interface RobotPlan{
+public interface RobotPlan {
 
     public void setRobotHead(String head);
 
