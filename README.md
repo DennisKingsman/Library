@@ -3,6 +3,10 @@
 # Contents
 ## Chapter 1 
 OOP base, SOLID, ACID, design-patterns  
+Pattern types  
+Generating patterns are intended for creating instances of classes or objects.  
+Structural patterns are designed to organize various classes and objects to form larger structures and provide new functionality.  
+Behavioral patterns are designed for effective communication between objects.  
 [you-tube-design-patterns-guide](https://www.youtube.com/playlist?list=PLF206E906175C7E07)  
 Strategy  
 The first rule: you do not need to add methods to super classes that will be useless for at least one child class.  
@@ -17,6 +21,9 @@ The Observer pattern is a `behavioral` design pattern. It allows you to notify a
 Nagatives: The Subject (publisher) may send updates that don't matter to the Observer (subscriber).  
 The scope in Java that uses the Observer template is the Java Message Service (JMS).  
 [java-observer-pattern](https://www.baeldung.com/java-observer-pattern)  
+Factory  
+A factory is a design pattern that helps solve the problem of creating different objects depending on certain conditions. (Generating pattern.)  
+Uses when the method return one of the several possible classes that share a common super class.  
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
