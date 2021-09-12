@@ -20,7 +20,7 @@ public class StockObserver implements Observer {
 
     private Subject stockGrabber;
 
-    public StockObserver(Subject stockGrabber){
+    public StockObserver(Subject stockGrabber) {
         // Store the reference to the stockGrabber object so
         // I can make calls to its methods
         this.stockGrabber = stockGrabber;
@@ -40,7 +40,7 @@ public class StockObserver implements Observer {
         printThePrices();
     }
 
-    public void printThePrices(){
+    public void printThePrices() {
         System.out.println(observerID + "\nIBM: " + ibmPrice + "\nAAPL: " +
                 aaplPrice + "\nGOOG: " + googPrice + "\n");
     }

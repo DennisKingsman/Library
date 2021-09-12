@@ -2,7 +2,7 @@ package observer;
 
 public class ObserverMain {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // Create the Subject object
         // It will handle updating all observers
         // as well as deleting and adding them
