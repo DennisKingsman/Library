@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FactoryMain {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // Create the factory object
         EnemyShipFactory shipFactory = new EnemyShipFactory();
 
@@ -13,10 +13,10 @@ public class FactoryMain {
         Scanner userInput = new Scanner(System.in);
         System.out.print("What type of ship? (U / R / B)");
 
-        if (userInput.hasNextLine()){
+        if (userInput.hasNextLine()) {
             String typeOfShip = userInput.nextLine();
             theEnemy = shipFactory.makeEnemyShip(typeOfShip);
-            if(theEnemy != null){
+            if (theEnemy != null) {
                 doStuffEnemy(theEnemy);
             } else System.out.print("Please enter U, R, or B next time");
         }
@@ -77,7 +77,7 @@ public class FactoryMain {
     }
 
     // Executes methods of the super class
-    public static void doStuffEnemy(EnemyShip anEnemyShip){
+    public static void doStuffEnemy(EnemyShip anEnemyShip) {
         anEnemyShip.displayEnemyShip();
         anEnemyShip.followHeroShip();
         anEnemyShip.enemyShipShoots();
