@@ -10,9 +10,13 @@ The second rule: avoid situations that lead to code duplication.
 The essence of the "Strategy"pattern:  
 A strategy is a `behavioral` design pattern that defines a family of similar algorithms and puts each of them in its own class, after which the algorithms can be interchanged right during program execution. These classes can implement an interface that assumes a certain behavior, but use their own unique algorithms for this behavior.  
 Negatives: increased number of classes  
+Starting with Java 8, many examples of the strategy can be replaced with simple lambda expressions.  
+[java-strategy-pattern-java-v8](https://www.baeldung.com/java-strategy-pattern)  
 Observer  
 The Observer pattern is a `behavioral` design pattern. It allows you to notify a set of objects, so-called Listeners (or Subscribers), about a change in the state of some other Subject (or Publisher) object.  
 Nagatives: The Subject (publisher) may send updates that don't matter to the Observer (subscriber).  
+The scope in Java that uses the Observer template is the Java Message Service (JMS).  
+[java-observer-pattern](https://www.baeldung.com/java-observer-pattern)  
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
