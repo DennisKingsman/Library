@@ -40,9 +40,8 @@ A builder is a `generative` design pattern.
 Prototype  
 A prototype is a `generative` design pattern that allows you to copy objects without going into the details of their implementation.  
 Decorater  
-
-
-
+A decorator is a `structural` design pattern that allows you to dynamically add new functionality to objects, wrapping them in useful "wrappers".  
+[habr-decorator](https://habr.com/ru/post/86255/)  
 
 ## Chapter 2 
 Json, xml  
