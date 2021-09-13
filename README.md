@@ -32,18 +32,13 @@ The final object
 The final objects contains objects that use the Strategy Pattern  
 It's a factory of factories  
 Singleton  
-
-
-
+A `generating` pattern that ensures that only one object is created for a certain class, and also provides an access point to this object.  
 Builder  
-
-
-
+The Builder pattern is a design pattern that allows you to create complex objects in stages using a well-defined sequence of actions.  
+The construction is controlled by the managing object (director), who only needs to know the type of the object being created.  
+A builder is a `generative` design pattern.  
 Prototype  
-
-
-
-
+A prototype is a `generative` design pattern that allows you to copy objects without going into the details of their implementation.  
 Decorater  
 
 
