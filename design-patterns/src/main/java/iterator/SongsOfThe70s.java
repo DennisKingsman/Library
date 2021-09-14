@@ -3,7 +3,7 @@ package iterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class SongsOfThe70s implements SongIterator{
+public class SongsOfThe70s implements SongIterator {
 
     // ArrayList holds SongInfo objects
     public ArrayList<SongInfo> bestSongs;
@@ -16,14 +16,14 @@ public class SongsOfThe70s implements SongIterator{
     }
 
     // Add a SongInfo object to the end of the ArrayList
-    public void addSong(String songName, String bandName, int yearReleased){
+    public void addSong(String songName, String bandName, int yearReleased) {
         SongInfo songInfo = new SongInfo(songName, bandName, yearReleased);
         bestSongs.add(songInfo);
     }
 
     // Get rid of this
     // Return the ArrayList filled with SongInfo Objects
-    public ArrayList<SongInfo> getBestSongs(){
+    public ArrayList<SongInfo> getBestSongs() {
         return bestSongs;
     }
 

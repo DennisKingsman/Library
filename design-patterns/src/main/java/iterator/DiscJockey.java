@@ -32,13 +32,13 @@ public class DiscJockey {
         iter90sSongs = newSongs90s;
     }
 
-    public void showTheSongs(){
+    public void showTheSongs() {
         // Because the SongInfo Objects are stored in different
         // collections everything must be handled on an individual
         // basis. This is BAD!
         ArrayList aL70sSongs = songs70s.getBestSongs();
         System.out.println("Songs of the 70s\n");
-        for(int i=0; i < aL70sSongs.size(); i++){
+        for (int i = 0; i < aL70sSongs.size(); i++) {
             SongInfo bestSongs = (SongInfo) aL70sSongs.get(i);
             System.out.println(bestSongs.getSongName());
             System.out.println(bestSongs.getBandName());
@@ -47,7 +47,7 @@ public class DiscJockey {
 
         SongInfo[] array80sSongs = songs80s.getBestSongs();
         System.out.println("Songs of the 80s\n");
-        for(int j=0; j < array80sSongs.length; j++){
+        for (int j = 0; j < array80sSongs.length; j++) {
             SongInfo bestSongs = array80sSongs[j];
             System.out.println(bestSongs.getSongName());
             System.out.println(bestSongs.getBandName());
@@ -66,7 +66,7 @@ public class DiscJockey {
 
     // Now that I can treat everything as an Iterator it cleans up
     // the code while allowing me to treat all collections as 1
-    public void showTheSongs2(){
+    public void showTheSongs2() {
         System.out.println("NEW WAY WITH ITERATOR\n");
         Iterator Songs70s = iter70sSongs.createIterator();
         Iterator Songs80s = iter80sSongs.createIterator();
@@ -80,8 +80,8 @@ public class DiscJockey {
         printTheSongs(Songs90s);
     }
 
-    public void printTheSongs(Iterator iterator){
-        while(iterator.hasNext()){
+    public void printTheSongs(Iterator iterator) {
+        while (iterator.hasNext()) {
             SongInfo songInfo = (SongInfo) iterator.next();
             System.out.println(songInfo.getSongName());
             System.out.println(songInfo.getBandName());
