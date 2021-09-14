@@ -30,7 +30,8 @@ The method that orders the object
 The factories that build the object  
 The final object  
 The final objects contains objects that use the Strategy Pattern  
-It's a factory of factories  
+It's a factory of factories.  
+[habr-abstract-factory](https://habr.com/ru/post/465835/)  
 Singleton  
 A `generating` pattern that ensures that only one object is created for a certain class, and also provides an access point to this object.  
 Builder  
