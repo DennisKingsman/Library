@@ -45,6 +45,20 @@ A decorator is a `structural` design pattern that allows you to dynamically add 
 The decorator stores the decorated object in itself and implemets the same behavior.  
 A decorator is an abstraction inherited by classes that make changes on top of (decorating) the main class.  
 [habr-decorator](https://habr.com/ru/post/86255/)  
+Command  
+
+
+
+Adapter  
+
+
+
+
+Facade  
+
+
+
+
 
 ## Chapter 2 
 Json, xml  
