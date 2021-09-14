@@ -3,7 +3,7 @@ package bridge;
 // Refined Abstraction
 
 // If I decide I want to further extend the remote I can
-public class DVDRemote extends RemoteButton{
+public class DVDRemote extends RemoteButton {
 
     private boolean play = true;
 

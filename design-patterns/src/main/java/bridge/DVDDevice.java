@@ -7,7 +7,7 @@ package bridge;
 // from other devices
 public class DVDDevice extends EntertainmentDevice {
 
-    public DVDDevice(int newDeviceState, int newMaxSetting){
+    public DVDDevice(int newDeviceState, int newMaxSetting) {
         super.deviceState = newDeviceState;
         super.maxSetting = newMaxSetting;
     }
