@@ -60,6 +60,17 @@ Facade
 
 
 
+Bridge  
+
+
+
+
+Template Method  
+
+
+
+
+
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
