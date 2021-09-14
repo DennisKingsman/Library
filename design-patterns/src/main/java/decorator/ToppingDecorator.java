@@ -12,7 +12,7 @@ abstract class ToppingDecorator implements Pizza {
 
     // All decorators can dynamically customize the Pizza
     // instance PlainPizza because of this
-    public ToppingDecorator(Pizza newPizza){
+    public ToppingDecorator(Pizza newPizza) {
         tempPizza = newPizza;
     }
 

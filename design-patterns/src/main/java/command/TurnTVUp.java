@@ -4,7 +4,7 @@ public class TurnTVUp implements Command {
 
     ElectronicDevice theDevice;
 
-    public TurnTVUp(ElectronicDevice newDevice){
+    public TurnTVUp(ElectronicDevice newDevice) {
         theDevice = newDevice;
     }
 

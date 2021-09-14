@@ -10,7 +10,7 @@ package decorator;
 // by writing new code rather than by changing current code
 
 //Bad
-public class ThreeCheesePizza implements Pizza{
+public class ThreeCheesePizza implements Pizza {
 
     private String description = "Mozzarella, Fontina, Parmesan Cheese Pizza";
     private double cost = 10.50;

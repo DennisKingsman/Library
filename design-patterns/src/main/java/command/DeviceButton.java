@@ -7,20 +7,20 @@ package command;
 // The execute method for the Command interface then calls
 // the method assigned in the class that implements the
 // Command interface
-public class DeviceButton{
+public class DeviceButton {
 
     public Command theCommand;
 
-    public DeviceButton(Command newCommand){
+    public DeviceButton(Command newCommand) {
         theCommand = newCommand;
     }
 
-    public void press(){
+    public void press() {
         theCommand.execute();
     }
 
     // Now the remote can undo past commands
-    public void pressUndo(){
+    public void pressUndo() {
         theCommand.undo();
     }
 

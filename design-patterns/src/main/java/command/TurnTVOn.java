@@ -4,7 +4,7 @@ public class TurnTVOn implements Command {
 
     ElectronicDevice theDevice;
 
-    public TurnTVOn(ElectronicDevice newDevice){
+    public TurnTVOn(ElectronicDevice newDevice) {
         theDevice = newDevice;
     }
 
