@@ -80,7 +80,37 @@ Composite
 
 
 
-Flyweight  
+Flyweight(?)  
+
+
+
+
+
+State  
+
+
+
+
+
+Proxy  
+
+
+
+
+
+Chain of Responsibility  
+
+
+
+
+Interpreter  
+(How to test??)  
+
+
+
+
+
+
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
