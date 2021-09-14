@@ -1,6 +1,9 @@
 package state;
 
-public class ATMMachine {
+import proxy.GetATMData;
+
+//implements for proxy(not for state)
+public class ATMMachine implements GetATMData {
 
     ATMState hasCard;
     ATMState noCard;
@@ -54,5 +57,12 @@ public class ATMMachine {
     public ATMState getHasPin() { return hasCorrectPin; }
 
     public ATMState getNoCashState() { return atmOutOfMoney; }
+
+    // NEW STUFF (FOR PROXY PATTERN) nothing with state
+    @Override
+    public ATMState getATMState() { return atmState; }
+
+    @Override
+    public int getCashInMachine() { return cashInMachine; }
 
 }
