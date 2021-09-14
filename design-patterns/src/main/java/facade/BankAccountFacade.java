@@ -15,7 +15,7 @@ public class BankAccountFacade {
     public FundsCheck fundChecker;
     public WelcomeToBank bankWelcome;
 
-    public BankAccountFacade(int newAcctNum, int newSecCode){
+    public BankAccountFacade(int newAcctNum, int newSecCode) {
         accountNumber = newAcctNum;
         securityCode = newSecCode;
         bankWelcome = new WelcomeToBank();
@@ -24,12 +24,16 @@ public class BankAccountFacade {
         fundChecker = new FundsCheck();
     }
 
-    public int getAccountNumber() { return accountNumber; }
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
-    public int getSecurityCode() { return securityCode; }
+    public int getSecurityCode() {
+        return securityCode;
+    }
 
-    public void withdrawCash(double cashToGet){
-        if(acctChecker.accountActive(getAccountNumber()) &&
+    public void withdrawCash(double cashToGet) {
+        if (acctChecker.accountActive(getAccountNumber()) &&
                 codeChecker.isCodeCorrect(getSecurityCode()) &&
                 fundChecker.haveEnoughMoney(cashToGet)) {
             System.out.println("Transaction Complete\n");
@@ -38,8 +42,8 @@ public class BankAccountFacade {
         }
     }
 
-    public void depositCash(double cashToDeposit){
-        if(acctChecker.accountActive(getAccountNumber()) &&
+    public void depositCash(double cashToDeposit) {
+        if (acctChecker.accountActive(getAccountNumber()) &&
                 codeChecker.isCodeCorrect(getSecurityCode())) {
             fundChecker.makeDeposit(cashToDeposit);
             System.out.println("Transaction Complete\n");

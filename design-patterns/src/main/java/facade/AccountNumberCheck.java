@@ -1,12 +1,14 @@
 package facade;
 
-public class AccountNumberCheck{
+public class AccountNumberCheck {
 
     private int accountNumber = 12345678;
 
-    public int getAccountNumber() { return accountNumber; }
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
-    public boolean accountActive(int acctNumToCheck){
+    public boolean accountActive(int acctNumToCheck) {
         return acctNumToCheck == getAccountNumber();
     }
 
