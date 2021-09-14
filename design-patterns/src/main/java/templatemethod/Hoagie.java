@@ -11,25 +11,31 @@ public abstract class Hoagie {
     // Declare this method final to keep subclasses from
     // changing the algorithm
     //could be a switch case
-    final void makeSandwich(){
+    final void makeSandwich() {
         cutBun();
-        if(customerWantsMeat()){
+        if (customerWantsMeat()) {
             addMeat();
             // Here to handle new lines for spacing
             afterFirstCondiment = true;
         }
-        if(customerWantsCheese()){
-            if(afterFirstCondiment) { System.out.print("\n"); }
+        if (customerWantsCheese()) {
+            if (afterFirstCondiment) {
+                System.out.print("\n");
+            }
             addCheese();
             afterFirstCondiment = true;
         }
-        if(customerWantsVegetables()){
-            if(afterFirstCondiment) { System.out.print("\n"); }
+        if (customerWantsVegetables()) {
+            if (afterFirstCondiment) {
+                System.out.print("\n");
+            }
             addVegetables();
             afterFirstCondiment = true;
         }
-        if(customerWantsCondiments()){
-            if(afterFirstCondiment) { System.out.print("\n"); }
+        if (customerWantsCondiments()) {
+            if (afterFirstCondiment) {
+                System.out.print("\n");
+            }
             addCondiments();
             afterFirstCondiment = true;
         }
@@ -45,7 +51,7 @@ public abstract class Hoagie {
 
     abstract void addCondiments();
 
-    public void cutBun(){
+    public void cutBun() {
         System.out.println("The Hoagie is Cut");
     }
 
@@ -54,19 +60,27 @@ public abstract class Hoagie {
 
     // Use abstract methods when you want to force the user
     // to override and use a hook when you want it to be optional
-    boolean customerWantsMeat() { return true; }
+    boolean customerWantsMeat() {
+        return true;
+    }
 
-    boolean customerWantsCheese() { return true; }
+    boolean customerWantsCheese() {
+        return true;
+    }
 
-    boolean customerWantsVegetables() { return true; }
+    boolean customerWantsVegetables() {
+        return true;
+    }
 
-    boolean customerWantsCondiments() { return true; }
+    boolean customerWantsCondiments() {
+        return true;
+    }
 
-    public void wrapTheHoagie(){
+    public void wrapTheHoagie() {
         System.out.println("\nWrap the Hoagie");
     }
 
-    public void afterFirstCondiment(){
+    public void afterFirstCondiment() {
         System.out.println("\n");
     }
 
