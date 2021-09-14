@@ -71,6 +71,16 @@ Template Method
 
 
 
+Iterator  
+
+
+
+Composite  
+
+
+
+
+Flyweight  
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 
