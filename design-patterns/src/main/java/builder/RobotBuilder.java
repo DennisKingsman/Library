@@ -4,14 +4,14 @@ package builder;
 // for the robot
 public interface RobotBuilder {
 
-    public void buildRobotHead();
+    void buildRobotHead();
 
-    public void buildRobotTorso();
+    void buildRobotTorso();
 
-    public void buildRobotArms();
+    void buildRobotArms();
 
-    public void buildRobotLegs();
+    void buildRobotLegs();
 
-    public Robot getRobot();
+    Robot getRobot();
 
 }

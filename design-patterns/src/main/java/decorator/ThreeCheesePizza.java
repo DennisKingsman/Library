@@ -9,6 +9,7 @@ package decorator;
 // Through composition I'll be able to add new functionality
 // by writing new code rather than by changing current code
 
+//Bad
 public class ThreeCheesePizza implements Pizza{
 
     private String description = "Mozzarella, Fontina, Parmesan Cheese Pizza";
@@ -29,4 +30,5 @@ public class ThreeCheesePizza implements Pizza{
     public double getCost() {
         return cost;
     }
+
 }

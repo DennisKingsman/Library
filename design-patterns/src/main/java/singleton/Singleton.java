@@ -1,4 +1,4 @@
-package singlrton;
+package singleton;
 
 import java.util.Arrays;
 import java.util.Collections;

@@ -5,10 +5,10 @@ package observer;
 
 public interface Subject {
 
-    public void register(Observer o);
+    void register(Observer o);
 
-    public void unregister(Observer o);
+    void unregister(Observer o);
 
-    public void notifyObserver();
+    void notifyObserver();
 
 }

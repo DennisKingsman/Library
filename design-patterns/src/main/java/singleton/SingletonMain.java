@@ -1,4 +1,4 @@
-package singlrton;
+package singleton;
 
 import java.util.LinkedList;
 

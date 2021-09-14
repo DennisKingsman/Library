@@ -1,4 +1,4 @@
-package singlrton;
+package singleton;
 
 public class ScrabbleTestThreads {
 

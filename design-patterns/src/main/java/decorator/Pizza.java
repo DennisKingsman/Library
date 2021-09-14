@@ -3,16 +3,14 @@ package decorator;
 // Blueprint for classes that will have decorators
 public interface Pizza {
 
-    public String getDescription();
+    String getDescription();
 
-    public double getCost();
+    double getCost();
 
 }
 
-
 /*
 public abstract class Pizza{
-
 
 	public abstract void setDescription(String newDescription);
 	public abstract String getDescription();
@@ -22,6 +20,5 @@ public abstract class Pizza{
 
 	// I could use getter and setter methods for every
 	// potential Pizza topping
-
 }
 */

@@ -7,6 +7,6 @@ package prototype;
 // is called
 public interface Animal extends Cloneable {
 
-    public Animal makeCopy();
+    Animal makeCopy();
 
 }
