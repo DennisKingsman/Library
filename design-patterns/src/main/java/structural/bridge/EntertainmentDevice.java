@@ -1,4 +1,4 @@
-package bridge;
+package structural.bridge;
 
 // Implementor
 // With the Bridge Design Pattern you create 2 layers of abstraction

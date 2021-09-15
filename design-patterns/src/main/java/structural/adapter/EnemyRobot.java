@@ -1,4 +1,4 @@
-package adapter;
+package structural.adapter;
 
 // This is the Adaptee. The Adapter sends method calls
 // to objects that use the EnemyAttacker interface

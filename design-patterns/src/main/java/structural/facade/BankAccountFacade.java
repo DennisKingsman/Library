@@ -1,4 +1,4 @@
-package facade;
+package structural.facade;
 
 // The Facade Design Pattern decouples or separates the client
 // from all of the sub components

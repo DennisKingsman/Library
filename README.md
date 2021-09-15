@@ -64,9 +64,10 @@ A decorator is an abstraction inherited by classes that make changes on top of (
 Command  
 A command is a `behavioral` design pattern that turns requests into objects, allowing you to pass them as arguments when calling methods, queue requests, log them, and support the cancellation of operations.  
 [command](https://refactoring.guru/ru/design-patterns/command)  
-
+[habr-command](https://habr.com/ru/post/114455/)  
+Команда хранит в себе то, по отношению к чему должна быть применена команда и внутри метода своего исполнения вызывает соответствующее действие объекта. При инициализации устройство является входным параметром в конструкторе Команды. Invoker в свою очередь имеет поле для ссылки на Команду и вызывает эту Команду. Внутри команды есть только методы execute() и undo().  
 Adapter  
-
+An adapter is a `structural` design pattern that allows objects with incompatible interfaces to work together.  
 
 
 
