@@ -6,6 +6,7 @@ package proxy;
 import state.ATMMachine;
 import state.ATMState;
 
+//some classes taken from the state pattern example
 public class ATMProxy implements GetATMData {
 
     // Allows the user to access getATMState in the

@@ -1,6 +1,6 @@
 package flyweight;
 
-// This factory only creates a new rectangle if it
+// This generative.factory only creates a new rectangle if it
 // uses a color not previously used
 
 // Intrinsic State: Color

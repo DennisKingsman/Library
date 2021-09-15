@@ -4,7 +4,7 @@
 ## Chapter 1 
 OOP base, SOLID, ACID, design-patterns  
 Pattern types  
-Generating patterns are intended for creating instances of classes or objects.  
+Generative patterns are intended for creating instances of classes or objects.  
 Structural patterns are designed to organize various classes and objects to form larger structures and provide new functionality.  
 Behavioral patterns are designed for effective communication between objects.  
 [you-tube-design-patterns-guide](https://www.youtube.com/playlist?list=PLF206E906175C7E07)  
@@ -16,14 +16,20 @@ A strategy is a `behavioral` design pattern that defines a family of similar alg
 Negatives: increased number of classes  
 Starting with Java 8, many examples of the strategy can be replaced with simple lambda expressions.  
 [java-strategy-pattern-java-v8](https://www.baeldung.com/java-strategy-pattern)  
+[strategy](https://refactoring.guru/ru/design-patterns/strategy)  
+Допустим у нас есть абстракция "Животное", от которой последуют наследники. Животное может уметь летать, а может не летать, поэтому, вместо того чтоб имплементировать поведение и переопределять методы, связанные с полетом, можно создать поле внутри абстракции, которое отвечает за полет, и два класса реализации - "Летающие" и "Нелетающие", которые имплементят контракт поведения. А после, при создании объекта конкретного наследника класса "Животные", подставлять в его поле одну из реализаций, в зависимости от того, летает животное или нет.  
 Observer  
 The Observer pattern is a `behavioral` design pattern. It allows you to notify a set of objects, so-called Listeners (or Subscribers), about a change in the state of some other Subject (or Publisher) object.  
 Nagatives: The Subject (publisher) may send updates that don't matter to the Observer (subscriber).  
 The scope in Java that uses the Observer template is the Java Message Service (JMS).  
 [java-observer-pattern](https://www.baeldung.com/java-observer-pattern)  
+[observer](https://refactoring.guru/ru/design-patterns/observer)  
+Допустим у нас есть некий объект, который следит за ценами, он может хранить список Обзерверов и оповещать их когда цена меняется, при этом объект отвечает за одну логику с этими ценами, а обзерверы за другую. Обзерверы в свою очередь хранят в себе реф на объект, за которым они следят. Этот реф передается в конструктор.  
 Factory  
 A factory is a design pattern that helps solve the problem of creating different objects depending on certain conditions. (`Generating` pattern.)  
 Uses when the method return one of the several possible classes that share a common super class.  
+Фабрика создает и возвращает конкретную необходимую в рантайм реализацию, в зависимости от переданных в нее параметров.  
+[factory-method](https://refactoring.guru/ru/design-patterns/factory-method)  
 Abstract Factory  
 It is like the Factory pattern but everything is encapsulated:  
 The method that orders the object  
@@ -32,22 +38,32 @@ The final object
 The final objects contains objects that use the Strategy Pattern  
 It's a factory of factories.  
 [habr-abstract-factory](https://habr.com/ru/post/465835/)  
+[abstract-factory](https://refactoring.guru/ru/design-patterns/abstract-factory)  
 Singleton  
-A `generating` pattern that ensures that only one object is created for a certain class, and also provides an access point to this object.  
+A `generative` pattern that ensures that only one object is created for a certain class, and also provides an access point to this object.  
+[javarush-singleton](https://javarush.ru/groups/posts/2365-patternih-proektirovanija-singleton)  
+[habr-singleton-vs-staticClass](https://habr.com/ru/post/103681/)  
+[singleton](https://refactoring.guru/ru/design-patterns/singleton)  
 Builder  
 The Builder pattern is a design pattern that allows you to create complex objects in stages using a well-defined sequence of actions.  
 The construction is controlled by the managing object (director), who only needs to know the type of the object being created.  
 A builder is a `generative` design pattern.  
+Директор имеет в себе поле, хранящее ссылку на Строитель. Строитель имеет в себе поле, ссылющееся на объект, который необходимо поэтапно построить. В конструкторе Строителя сразу создается этот объект. После, директор вызовом одного метода принуждает Строитель исполнить поэтапное строительство(инициализацию полей объекта).  Другим методом Директор может вернуть сам построенный объект.  
+[builder](https://refactoring.guru/ru/design-patterns/builder)  
 Prototype  
 A prototype is a `generative` design pattern that allows you to copy objects without going into the details of their implementation.  
+Создание фабрики копий, которая клонирует, создавая новый объект. Объект должен имплементировать Cloneable, реализация клонирования на классе объекта, а не классе фабрики. (по крайней мере в примере)  
+[prototype](https://refactoring.guru/ru/design-patterns/prototype)  
 Decorater  
 A decorator is a `structural` design pattern that allows you to dynamically add new functionality to objects, wrapping them in useful "wrappers".  
 The decorator stores the decorated object in itself and implemets the same behavior.  
 A decorator is an abstraction inherited by classes that make changes on top of (decorating) the main class.  
+Декоратор хранит в себе декорируемый объект, реализует его поведение, и добавляет функционал работая с ссылкой на хранимый объект.  
 [habr-decorator](https://habr.com/ru/post/86255/)  
+[decorator](https://refactoring.guru/ru/design-patterns/decorator)  
 Command  
-
-
+A command is a `behavioral` design pattern that turns requests into objects, allowing you to pass them as arguments when calling methods, queue requests, log them, and support the cancellation of operations.  
+[command](https://refactoring.guru/ru/design-patterns/command)  
 
 Adapter  
 
@@ -109,7 +125,7 @@ Interpreter
 
 
 
-
+Mediator  
 
 ## Chapter 2 
 Json, xml  
