@@ -1,4 +1,4 @@
-package templatemethod;
+package behavioral.templatemethod;
 
 public class TemplateMethodMain {
 

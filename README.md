@@ -68,28 +68,22 @@ A command is a `behavioral` design pattern that turns requests into objects, all
 Команда хранит в себе то, по отношению к чему должна быть применена команда и внутри метода своего исполнения вызывает соответствующее действие объекта. При инициализации устройство является входным параметром в конструкторе Команды. Invoker в свою очередь имеет поле для ссылки на Команду и вызывает эту Команду. Внутри команды есть только методы execute() и undo().  
 Adapter  
 An adapter is a `structural` design pattern that allows objects with incompatible interfaces to work together.  
-
-
-
+[adapter](https://refactoring.guru/ru/design-patterns/adapter)  
 Facade  
-
-
-
-
-
+A facade is a `structural` design pattern that provides a simple interface to a complex class system, library, or framework.  
+For me it is the same as service layer.  
+[facade](https://refactoring.guru/ru/design-patterns/facade)  
 Bridge  
-
-
-
-
+A bridge is a `structural` design pattern that divides one or more classes into two separate hierarchies — abstraction and implementation, allowing them to be changed independently of each other.  
+Progressively adding functionality while separating out major differences using abstract classes.  
+Допустим у нас есть абстракция в которой несколько методов. У этой абстракции будут свои наследники и поведение их методов может быть как схожим так и различным. Затем появляется необходимость унаследовать все это поведение и добавить новый метод при этом сохранить различие поведения у реализаций старых методов. Если унаследовать класс, то старые методы придется переопределить единым образом или создать еще больше наследников, которые уже будут иметь новую функциональность. Вместо этого можно создать Новую Абстракцию которая методом композиции будет хранить в себе поле типа Старой Абстракции. Передавая в конструктор Новой Абстракции реализацию Старой, мы будет иметь уже готовое переопределенное поведение старых методов. Причем оно будет переопределено нужным образом под переданную реализацию. При этом теперь есть возможность в Новой Абстракции обозначить новые методы. Объект реализации Новой Абстракции будет вынужден при создании в конструктор поместить объект Старой Абстракции. Таким образом он унаследует поведение старых методов, а сама Новая Реализация даст ему необходимое поведение новых методов.  
+[bridge](https://refactoring.guru/ru/design-patterns/bridge)  
 Template Method  
-
-
-
-
-
+A template method is a `behavioral` design pattern that defines the skeleton of an algorithm, shifting responsibility for some of its steps to subclasses. The pattern allows subclasses to redefine the steps of the algorithm without changing its overall structure.  
+В классе Шаблоне есть метод Шаблон в котором вызвана куча войд методов. Так же класс Шаблон содержит кучу методов флагов, которые по дефолту говорят о необходимости вызова того или иного войд метода в шаблоне. Классы наследники Шаблона определят эти методы по своему, и при необходимости они могут выключить флаг необходимости и оставить войд метод пустым.  
+[template-method](https://refactoring.guru/ru/design-patterns/template-method)  
 Iterator  
-
+An iterator is a `behavioral` design pattern that makes it possible to consistently bypass the elements of composite objects without revealing their internal representation.  
 
 
 Composite  

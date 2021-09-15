@@ -1,4 +1,4 @@
-package iterator;
+package behavioral.iterator;
 
 public class IteratorMain {
 

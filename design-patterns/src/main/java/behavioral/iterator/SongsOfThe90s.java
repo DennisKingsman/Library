@@ -1,4 +1,4 @@
-package iterator;
+package behavioral.iterator;
 
 import java.util.Hashtable;
 import java.util.Iterator;

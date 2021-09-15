@@ -1,4 +1,4 @@
-package templatemethod;
+package behavioral.templatemethod;
 
 // A Template Method Pattern contains a method that provides
 // the steps of the algorithm. It allows subclasses to override

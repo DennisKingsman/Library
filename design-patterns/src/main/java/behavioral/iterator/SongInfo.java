@@ -1,4 +1,4 @@
-package iterator;
+package behavioral.iterator;
 
 // Will hold all of the info needed for each song
 

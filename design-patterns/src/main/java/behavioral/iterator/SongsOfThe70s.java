@@ -1,4 +1,4 @@
-package iterator;
+package behavioral.iterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
