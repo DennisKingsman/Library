@@ -84,21 +84,18 @@ A template method is a `behavioral` design pattern that defines the skeleton of 
 [template-method](https://refactoring.guru/ru/design-patterns/template-method)  
 Iterator  
 An iterator is a `behavioral` design pattern that makes it possible to consistently bypass the elements of composite objects without revealing their internal representation.  
-
-
+Создать интерфейс который будет иметь метод возвращающий итератор и реализовывать его.  
+[iterator](https://refactoring.guru/ru/design-patterns/iterator)  
 Composite  
-
-
-
-
-Flyweight(?)  
-
-
-
-
-
+A Composite is a `structural` design pattern that allows you to group many objects into a tree structure, and then work with it as if it were a single object.  
+Создать абстракцию, которая будет являться компонентом дерева. Реализовать абстракцию классом списком(корнем нескольких листьев) и классом листом, который будет храниться в списке. Таким образом один корень сможет хранить в себе другие корни и листы.  
+[composite](https://refactoring.guru/ru/design-patterns/composite)  
+Flyweight  
+Flyweight is a `structural` design pattern that allows you to fit a larger number of objects into the allocated RAM. Lightweight saves memory by sharing the general state of objects among themselves, instead of storing the same data in each object.  
+Сохранять созданные объекты если у них уже есть необходимое свойство.  
+[flyweight](https://refactoring.guru/ru/design-patterns/flyweight)  
 State  
-
+A State is a `behavioral` design pattern that allows objects to change behavior depending on their state. From the outside, it seems that the object class has changed.  
 
 
 

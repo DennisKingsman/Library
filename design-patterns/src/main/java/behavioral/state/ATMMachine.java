@@ -1,8 +1,8 @@
-package state;
+package behavioral.state;
 
 import proxy.GetATMData;
 
-//implements for proxy(not for state)
+//implements for proxy(not for behavioral.state)
 public class ATMMachine implements GetATMData {
 
     ATMState hasCard;
@@ -58,7 +58,7 @@ public class ATMMachine implements GetATMData {
 
     public ATMState getNoCashState() { return atmOutOfMoney; }
 
-    // NEW STUFF (FOR PROXY PATTERN) nothing with state
+    // NEW STUFF (FOR PROXY PATTERN) nothing with behavioral.state
     @Override
     public ATMState getATMState() { return atmState; }
 

@@ -1,4 +1,4 @@
-package state;
+package behavioral.state;
 
 public interface ATMState {
 

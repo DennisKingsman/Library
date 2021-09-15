@@ -1,6 +1,6 @@
 package proxy;
 
-import state.ATMMachine;
+import behavioral.state.ATMMachine;
 
 public class ProxyMain {
 

@@ -1,4 +1,4 @@
-package composite;
+package structural.composite;
 
 // This acts as an interface for every Song (Leaf)
 // and SongGroup (Composite) we create

@@ -1,4 +1,4 @@
-package flyweight;
+package structural.flyweight;
 
 // This generative.factory only creates a new rectangle if it
 // uses a color not previously used
@@ -16,7 +16,7 @@ public class RectFactory {
     private static final HashMap<Color, MyRect> rectsByColor = new HashMap<>();
 
     public static MyRect getRect(Color color) {
-        MyRect rect = (MyRect) rectsByColor.get(color);
+        MyRect rect = rectsByColor.get(color);
         // Checks if a rectangle with a specific
         // color has been made. If not it makes a
         // new one, otherwise it returns one made already

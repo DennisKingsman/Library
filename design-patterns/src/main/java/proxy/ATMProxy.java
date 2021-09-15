@@ -3,10 +3,10 @@ package proxy;
 // In this situation the proxy both creates and destroys
 // an ATMMachine Object
 
-import state.ATMMachine;
-import state.ATMState;
+import behavioral.state.ATMMachine;
+import behavioral.state.ATMState;
 
-//some classes taken from the state pattern example
+//some classes taken from the behavioral.state pattern example
 public class ATMProxy implements GetATMData {
 
     // Allows the user to access getATMState in the
