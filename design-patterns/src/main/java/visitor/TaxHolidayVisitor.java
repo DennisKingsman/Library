@@ -14,7 +14,7 @@ class TaxHolidayVisitor implements Visitor {
 
     // Calculates total price based on this being taxed
     // as a liquor item
-@Override
+    @Override
     public double visit(Liquor liquorItem) {
         System.out.println("Liquor Item: Price with Tax");
         return Double.parseDouble(df.format((liquorItem.getPrice() * .10) + liquorItem.getPrice()));
