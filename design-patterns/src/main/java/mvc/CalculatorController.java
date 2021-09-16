@@ -19,7 +19,7 @@ public class CalculatorController {
         this.theView.addCalculateListener(new CalculateListener());
     }
 
-    class CalculateListener implements ActionListener{
+    class CalculateListener implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -29,12 +29,12 @@ public class CalculatorController {
             // Surround interactions with the view with
             // a try block in case numbers weren't
             // properly entered
-            try{
+            try {
                 firstNumber = theView.getFirstNumber();
                 secondNumber = theView.getSecondNumber();
                 theModel.addTwoNumbers(firstNumber, secondNumber);
                 theView.setCalcSolution(theModel.getCalculationValue());
-            } catch(NumberFormatException ex){
+            } catch (NumberFormatException ex) {
                 System.out.println(ex);
                 theView.displayErrorMessage("You Need to Enter 2 Integers");
             }
