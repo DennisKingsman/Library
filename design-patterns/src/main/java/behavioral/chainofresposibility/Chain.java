@@ -1,4 +1,4 @@
-package chainofresposibility;
+package behavioral.chainofresposibility;
 
 // The chain of responsibility pattern has a
 // group of objects that are expected to between

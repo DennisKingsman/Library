@@ -1,4 +1,4 @@
-package chainofresposibility;
+package behavioral.chainofresposibility;
 
 public class SubtractNumbers implements Chain{
 

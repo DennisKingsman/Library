@@ -12,7 +12,7 @@ Strategy
 The first rule: you do not need to add methods to super classes that will be useless for at least one child class.  
 The second rule: avoid situations that lead to code duplication.  
 The essence of the "Strategy"pattern:  
-A strategy is a `behavioral` design pattern that defines a family of similar algorithms and puts each of them in its own class, after which the algorithms can be interchanged right during program execution. These classes can implement an interface that assumes a certain behavior, but use their own unique algorithms for this behavior.  
+A Strategy is a `behavioral` design pattern that defines a family of similar algorithms and puts each of them in its own class, after which the algorithms can be interchanged right during program execution. These classes can implement an interface that assumes a certain behavior, but use their own unique algorithms for this behavior.  
 Negatives: increased number of classes  
 Starting with Java 8, many examples of the strategy can be replaced with simple lambda expressions.  
 [java-strategy-pattern-java-v8](https://www.baeldung.com/java-strategy-pattern)  
@@ -26,7 +26,7 @@ The scope in Java that uses the Observer template is the Java Message Service (J
 [observer](https://refactoring.guru/ru/design-patterns/observer)  
 Допустим у нас есть некий объект, который следит за ценами, он может хранить список Обзерверов и оповещать их когда цена меняется, при этом объект отвечает за одну логику с этими ценами, а обзерверы за другую. Обзерверы в свою очередь хранят в себе реф на объект, за которым они следят. Этот реф передается в конструктор.  
 Factory  
-A factory is a design pattern that helps solve the problem of creating different objects depending on certain conditions. (`Generating` pattern.)  
+A Factory is a design pattern that helps solve the problem of creating different objects depending on certain conditions. (`Generating` pattern.)  
 Uses when the method return one of the several possible classes that share a common super class.  
 Фабрика создает и возвращает конкретную необходимую в рантайм реализацию, в зависимости от переданных в нее параметров.  
 [factory-method](https://refactoring.guru/ru/design-patterns/factory-method)  
@@ -51,39 +51,39 @@ A builder is a `generative` design pattern.
 Директор имеет в себе поле, хранящее ссылку на Строитель. Строитель имеет в себе поле, ссылющееся на объект, который необходимо поэтапно построить. В конструкторе Строителя сразу создается этот объект. После, директор вызовом одного метода принуждает Строитель исполнить поэтапное строительство(инициализацию полей объекта).  Другим методом Директор может вернуть сам построенный объект.  
 [builder](https://refactoring.guru/ru/design-patterns/builder)  
 Prototype  
-A prototype is a `generative` design pattern that allows you to copy objects without going into the details of their implementation.  
+A Prototype is a `generative` design pattern that allows you to copy objects without going into the details of their implementation.  
 Создание фабрики копий, которая клонирует, создавая новый объект. Объект должен имплементировать Cloneable, реализация клонирования на классе объекта, а не классе фабрики. (по крайней мере в примере)  
 [prototype](https://refactoring.guru/ru/design-patterns/prototype)  
 Decorater  
-A decorator is a `structural` design pattern that allows you to dynamically add new functionality to objects, wrapping them in useful "wrappers".  
+A Decorator is a `structural` design pattern that allows you to dynamically add new functionality to objects, wrapping them in useful "wrappers".  
 The decorator stores the decorated object in itself and implemets the same behavior.  
 A decorator is an abstraction inherited by classes that make changes on top of (decorating) the main class.  
 Декоратор хранит в себе декорируемый объект, реализует его поведение, и добавляет функционал работая с ссылкой на хранимый объект.  
 [habr-decorator](https://habr.com/ru/post/86255/)  
 [decorator](https://refactoring.guru/ru/design-patterns/decorator)  
 Command  
-A command is a `behavioral` design pattern that turns requests into objects, allowing you to pass them as arguments when calling methods, queue requests, log them, and support the cancellation of operations.  
+A Command is a `behavioral` design pattern that turns requests into objects, allowing you to pass them as arguments when calling methods, queue requests, log them, and support the cancellation of operations.  
 [command](https://refactoring.guru/ru/design-patterns/command)  
 [habr-command](https://habr.com/ru/post/114455/)  
 Команда хранит в себе то, по отношению к чему должна быть применена команда и внутри метода своего исполнения вызывает соответствующее действие объекта. При инициализации устройство является входным параметром в конструкторе Команды. Invoker в свою очередь имеет поле для ссылки на Команду и вызывает эту Команду. Внутри команды есть только методы execute() и undo().  
 Adapter  
-An adapter is a `structural` design pattern that allows objects with incompatible interfaces to work together.  
+An Adapter is a `structural` design pattern that allows objects with incompatible interfaces to work together.  
 [adapter](https://refactoring.guru/ru/design-patterns/adapter)  
 Facade  
-A facade is a `structural` design pattern that provides a simple interface to a complex class system, library, or framework.  
+A Facade is a `structural` design pattern that provides a simple interface to a complex class system, library, or framework.  
 For me it is the same as service layer.  
 [facade](https://refactoring.guru/ru/design-patterns/facade)  
 Bridge  
-A bridge is a `structural` design pattern that divides one or more classes into two separate hierarchies — abstraction and implementation, allowing them to be changed independently of each other.  
+A Bridge is a `structural` design pattern that divides one or more classes into two separate hierarchies — abstraction and implementation, allowing them to be changed independently of each other.  
 Progressively adding functionality while separating out major differences using abstract classes.  
 Допустим у нас есть абстракция в которой несколько методов. У этой абстракции будут свои наследники и поведение их методов может быть как схожим так и различным. Затем появляется необходимость унаследовать все это поведение и добавить новый метод при этом сохранить различие поведения у реализаций старых методов. Если унаследовать класс, то старые методы придется переопределить единым образом или создать еще больше наследников, которые уже будут иметь новую функциональность. Вместо этого можно создать Новую Абстракцию которая методом композиции будет хранить в себе поле типа Старой Абстракции. Передавая в конструктор Новой Абстракции реализацию Старой, мы будет иметь уже готовое переопределенное поведение старых методов. Причем оно будет переопределено нужным образом под переданную реализацию. При этом теперь есть возможность в Новой Абстракции обозначить новые методы. Объект реализации Новой Абстракции будет вынужден при создании в конструктор поместить объект Старой Абстракции. Таким образом он унаследует поведение старых методов, а сама Новая Реализация даст ему необходимое поведение новых методов.  
 [bridge](https://refactoring.guru/ru/design-patterns/bridge)  
 Template Method  
-A template method is a `behavioral` design pattern that defines the skeleton of an algorithm, shifting responsibility for some of its steps to subclasses. The pattern allows subclasses to redefine the steps of the algorithm without changing its overall structure.  
+A Template Method is a `behavioral` design pattern that defines the skeleton of an algorithm, shifting responsibility for some of its steps to subclasses. The pattern allows subclasses to redefine the steps of the algorithm without changing its overall structure.  
 В классе Шаблоне есть метод Шаблон в котором вызвана куча войд методов. Так же класс Шаблон содержит кучу методов флагов, которые по дефолту говорят о необходимости вызова того или иного войд метода в шаблоне. Классы наследники Шаблона определят эти методы по своему, и при необходимости они могут выключить флаг необходимости и оставить войд метод пустым.  
 [template-method](https://refactoring.guru/ru/design-patterns/template-method)  
 Iterator  
-An iterator is a `behavioral` design pattern that makes it possible to consistently bypass the elements of composite objects without revealing their internal representation.  
+An Iterator is a `behavioral` design pattern that makes it possible to consistently bypass the elements of composite objects without revealing their internal representation.  
 Создать интерфейс который будет иметь метод возвращающий итератор и реализовывать его.  
 [iterator](https://refactoring.guru/ru/design-patterns/iterator)  
 Composite  
@@ -96,29 +96,29 @@ Flyweight is a `structural` design pattern that allows you to fit a larger numbe
 [flyweight](https://refactoring.guru/ru/design-patterns/flyweight)  
 State  
 A State is a `behavioral` design pattern that allows objects to change behavior depending on their state. From the outside, it seems that the object class has changed.  
-
-
-
-
+У нас есть интерфейс состояний и несколько классов состояний которые его реализуют. Есть класс, объект которого может прибывать в этих состояниях. Этот класс имеет поля в виде Состояний, а состояния хранят в себе ссылку на объект этого класса. При создании объекта, хранящего в себе свои состояния, он инициализирует состояния в своем конструкторе.  При вызове метода у объекта, эти методы вызываются у состояния объекта, в котором он находится. (так как предполагается, что в разных состояниях будет разное поведение) В свою очередь состояние, при вызове этих методов, храня в себе ссылку на объект главного класса, может при необходимости в этих методах поменять состояние объекта и перевести его в другое состояние. Главный класс, помимо полей - состояний, имеет в себе все те же методы, что и состояния, но не реализовывает интерфейс состояний, а в этих методах просто вызывает тот же метод у своего состояния.  
+[state](https://refactoring.guru/ru/design-patterns/state)  
 Proxy  
-
-
-
-
-
+A proxy is a `structural` design pattern that allows you to substitute special proxy objects instead of real objects. These objects intercept calls to the original object, allowing you to do something before or after passing the call to the original.  
+Основной класс и прокси реализуют один интерфейс с методами, которые можно выкинуть наружу. При этом основной класс так же реализует методы, доступ к которым давать не безопасно. Тогда при создании прокси будут доступны только безопасные методы. Прокси же внутри себя создает инстанс основного класса.  
+Если создать ссылку интерфейса с безопасными методами, то даже инициализировав ее основным классом невозможно будет обратиться к методам, которые не указаны в интерфейсе.  
+[proxy](https://refactoring.guru/ru/design-patterns/proxy)  
 Chain of Responsibility  
-
-
-
-
+A Chain of Responsibilities is a `behavioral` design pattern that allows you to pass requests sequentially through a chain of handlers. Each subsequent handler decides whether it can process the request itself and whether it is worth passing the request further along the chain.  
+Интерфейс цепочка имеет два метода:  
+Установить следующий элемент цепочки  
+Выполнить действие  
+Можно инициализировать цепочку создав первый эл-т и добавить в него след. и т.д. и потом просто вызвать действие у первого, который в случае невозможности выполнения вызовет действие у следующего и т.д.  
+Smth like spring security config or securityFilter or webFlux.  
+[chain-of-responsibility](https://refactoring.guru/ru/design-patterns/chain-of-responsibility)  
 Interpreter  
-(How to test??)  
-
-
-
-
+Interpreter design pattern is one of the `behavioral` design pattern. Interpreter pattern is used to defines a grammatical representation for a language and provides an interpreter to deal with this grammar.  
+У нас есть сообщение в которых могут быть выражения и действия с ними. Это выносится в абстракцию а под каждое отдельное выражение создается реализация. И есть сам интерпретатор который парсит целое сообщение на выражение и другие составные части. Это основная часть паттерна, но с помощью рефлексии можно достичь большего. Допустим в сообщении написаны выражения и действия с ними которые совпадают с названиями классов и методов этих классов. Тогда распарсив это выражение можно получать классы и методы по имени.  
+[habr-interpreter](https://habr.com/ru/post/136371/)  
+[baeldung-interpreter](https://www.baeldung.com/java-interpreter-pattern)  
+[springframework.guru-interpreter](https://springframework.guru/gang-of-four-design-patterns/interpreter-pattern/)  
 Mediator  
-
+A Mediator is a `behavioral` design pattern that allows you to reduce the connectivity of many classes to each other by moving these connections into one intermediary class.
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 

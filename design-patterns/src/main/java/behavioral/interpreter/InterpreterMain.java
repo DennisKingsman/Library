@@ -1,4 +1,4 @@
-package interpreter;
+package behavioral.interpreter;
 
 import javax.swing.*;
 import java.lang.reflect.Constructor;
@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 
 public class InterpreterMain {
 
+    //When TEST enter for example "1 pint to tablespoons"
     public static void main(String[] args) {
         // Create pop up window that asks for a question
         JFrame frame = new JFrame();
@@ -19,13 +20,14 @@ public class InterpreterMain {
 
         double quantity = question.getQuantity();
         try {
+            System.out.println(fromConversion);
             // Get class based on the from conversion string
-            Class tempClass = Class.forName(fromConversion);
+            Class tempClass = Class.forName("behavioral.interpreter." + fromConversion);
             // Get the constructor dynamically for the conversion string
             Constructor con = tempClass.getConstructor();
 
             // Create a new instance of the object you want to convert from
-            Object convertFrom = (Expression) con.newInstance();
+            Object convertFrom = con.newInstance();
 
             // Define the method parameters expected by the method that
             // will convert to your chosen unit of measure
@@ -36,7 +38,7 @@ public class InterpreterMain {
             Method conversionMethod = tempClass.getMethod(toConversion, methodParams);
 
             // Define the method parameters that will be passed to the above method
-            Object[] params = new Object[]{new Double(quantity)};
+            Object[] params = new Object[]{quantity};
             // Get the quantity after the conversion
             String toQuantity = (String) conversionMethod.invoke(convertFrom, params);
 

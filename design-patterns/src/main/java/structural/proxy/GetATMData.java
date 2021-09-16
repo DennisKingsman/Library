@@ -1,7 +1,7 @@
-package proxy;
+package structural.proxy;
 
 // This interface will contain just those methods
-// that you want the proxy to provide access to
+// that you want the structural.proxy to provide access to
 
 import behavioral.state.ATMState;
 

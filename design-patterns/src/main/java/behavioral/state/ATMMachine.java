@@ -1,11 +1,11 @@
 package behavioral.state;
 
-import proxy.GetATMData;
+import structural.proxy.GetATMData;
 
-//implements for proxy(not for behavioral.state)
+//implements for structural.proxy(not for behavioral.state)
 public class ATMMachine implements GetATMData {
 
-    ATMState hasCard;
+    private ATMState hasCard;
     ATMState noCard;
     ATMState hasCorrectPin;
     ATMState atmOutOfMoney;

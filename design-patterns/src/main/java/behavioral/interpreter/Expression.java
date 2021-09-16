@@ -1,4 +1,4 @@
-package interpreter;
+package behavioral.interpreter;
 
 public abstract class Expression {
 

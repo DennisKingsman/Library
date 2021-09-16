@@ -1,6 +1,6 @@
-package proxy;
+package structural.proxy;
 
-// In this situation the proxy both creates and destroys
+// In this situation the structural.proxy both creates and destroys
 // an ATMMachine Object
 
 import behavioral.state.ATMMachine;

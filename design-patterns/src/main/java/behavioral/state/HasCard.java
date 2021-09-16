@@ -2,7 +2,7 @@ package behavioral.state;
 
 public class HasCard implements ATMState {
 
-    ATMMachine atmMachine;
+    private ATMMachine atmMachine;
 
     public HasCard(ATMMachine newATMMachine){
         atmMachine = newATMMachine;
