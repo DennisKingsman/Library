@@ -1,8 +1,8 @@
 package behavioral.chainofresposibility;
 
-public class AddNumbers implements Chain{
+public class AddNumbers implements Chain {
 
-    private  Chain nextInChain;
+    private Chain nextInChain;
 
     // Defines the next Object to receive the
     // data if this one can't use it
@@ -15,9 +15,9 @@ public class AddNumbers implements Chain{
     // to the Object defined in method setNextChain()
     @Override
     public void calculate(Numbers request) {
-        if(request.getCalcWanted() == "add"){
-            System.out.print(request.getNumber1() + " + " + request.getNumber2() + " = "+
-                    (request.getNumber1()+request.getNumber2()));
+        if (request.getCalcWanted() == "add") {
+            System.out.print(request.getNumber1() + " + " + request.getNumber2() + " = " +
+                    (request.getNumber1() + request.getNumber2()));
         } else {
             nextInChain.calculate(request);
         }

@@ -6,19 +6,25 @@ public class Song extends SongComponent {
     String bandName;
     int releaseYear;
 
-    public Song(String newSongName, String newBandName, int newReleaseYear){
+    public Song(String newSongName, String newBandName, int newReleaseYear) {
         songName = newSongName;
         bandName = newBandName;
         releaseYear = newReleaseYear;
     }
 
-    public String getSongName() { return songName; }
+    public String getSongName() {
+        return songName;
+    }
 
-    public String getBandName() { return bandName; }
+    public String getBandName() {
+        return bandName;
+    }
 
-    public int getReleaseYear() { return releaseYear; }
+    public int getReleaseYear() {
+        return releaseYear;
+    }
 
-    public void displaySongInfo(){
+    public void displaySongInfo() {
         System.out.println(getSongName() + " was recorded by " +
                 getBandName() + " in " + getReleaseYear());
     }

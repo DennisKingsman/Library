@@ -46,7 +46,7 @@ public class InterpreterMain {
             String answerToQues = question.getResponse() +
                     toQuantity + " " + toConversion;
 
-            JOptionPane.showMessageDialog(null,answerToQues);
+            JOptionPane.showMessageDialog(null, answerToQues);
             // Closes the frame after OK is clicked
             frame.dispose();
         } catch (Exception e) {

@@ -4,16 +4,16 @@ public class CompositeMain {
 
     public static void main(String[] args) {
         SongComponent industrialMusic = new SongGroup("Industrial",
-                        "is a style of experimental music" +
-                                " that draws on transgressive and provocative themes");
+                "is a style of experimental music" +
+                        " that draws on transgressive and provocative themes");
 
         SongComponent heavyMetalMusic = new SongGroup("\nHeavy Metal",
-                        "is a genre of rock that developed in the late 1960s," +
-                                " largely in the UK and in the US");
+                "is a genre of rock that developed in the late 1960s," +
+                        " largely in the UK and in the US");
 
         SongComponent dubstepMusic = new SongGroup("\nDubstep",
-                        "is a genre of electronic dance music " +
-                                "that originated in South London, England");
+                "is a genre of electronic dance music " +
+                        "that originated in South London, England");
 
         // Top level component that holds everything
         SongComponent everySong = new SongGroup("Song List", "Every Song Available");

@@ -1,8 +1,8 @@
 package behavioral.chainofresposibility;
 
-public class MultNumbers implements Chain{
+public class MultNumbers implements Chain {
 
-    private  Chain nextInChain;
+    private Chain nextInChain;
 
     @Override
     public void setNextChain(Chain nextChain) {
@@ -11,9 +11,9 @@ public class MultNumbers implements Chain{
 
     @Override
     public void calculate(Numbers request) {
-        if(request.getCalcWanted() == "mult"){
-            System.out.print(request.getNumber1() + " * " + request.getNumber2() + " = "+
-                    (request.getNumber1()*request.getNumber2()));
+        if (request.getCalcWanted() == "mult") {
+            System.out.print(request.getNumber1() + " * " + request.getNumber2() + " = " +
+                    (request.getNumber1() * request.getNumber2()));
         } else {
             nextInChain.calculate(request);
         }

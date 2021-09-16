@@ -1,6 +1,6 @@
 package mediator;
 
-public class GormanSlacks extends Colleague{
+public class GormanSlacks extends Colleague {
 
     public GormanSlacks(Mediator newMediator) {
         super(newMediator);

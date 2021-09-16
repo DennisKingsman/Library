@@ -1,6 +1,6 @@
 package mediator;
 
-public class JTPoorman extends Colleague{
+public class JTPoorman extends Colleague {
 
     public JTPoorman(Mediator newMediator) {
         super(newMediator);
