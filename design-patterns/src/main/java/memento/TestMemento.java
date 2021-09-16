@@ -4,12 +4,12 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TestMemento extends JFrame{
+public class TestMemento extends JFrame {
 
     private JButton saveBut, undoBut, redoBut;
 
     // JTextArea(rows, columns)
-    private JTextArea theArticle = new JTextArea(40,60);
+    private JTextArea theArticle = new JTextArea(40, 60);
 
     // ---------------------------------------------
 
@@ -31,10 +31,10 @@ public class TestMemento extends JFrame{
         new TestMemento();
     }
 
-    public TestMemento(){
+    public TestMemento() {
         // Set basic information for the panel that will
         // hold all the GUI elements
-        this.setSize(750,780);
+        this.setSize(750, 780);
         this.setTitle("Memento Design Pattern");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel1 = new JPanel();
@@ -64,13 +64,13 @@ public class TestMemento extends JFrame{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getSource() == saveBut){
+            if (e.getSource() == saveBut) {
                 // Get text in JTextArea
                 String textInTextArea = theArticle.getText();
                 // Set the value for the current memento
                 originator.set(textInTextArea);
                 // Add new article to the ArrayList
-                caretaker.addMemento( originator.storeInMemento() );
+                caretaker.addMemento(originator.storeInMemento());
                 // saveFiles monitors how many articles are saved
                 // currentArticle monitors the current article displayed
                 saveFiles++;
@@ -78,12 +78,12 @@ public class TestMemento extends JFrame{
                 System.out.println("Save Files " + saveFiles);
                 // Make undo clickable
                 undoBut.setEnabled(true);
-            } else if(e.getSource() == undoBut){
-                if(currentArticle >= 1){
+            } else if (e.getSource() == undoBut) {
+                if (currentArticle >= 1) {
                     // Decrement to the current article displayed
                     currentArticle--;
                     // Get the older article saved and display it in JTextArea
-                    String textBoxString = originator.restoreFromMemento( caretaker.getMemento(currentArticle) );
+                    String textBoxString = originator.restoreFromMemento(caretaker.getMemento(currentArticle));
                     theArticle.setText(textBoxString);
                     // Make Redo clickable
                     redoBut.setEnabled(true);
@@ -91,12 +91,12 @@ public class TestMemento extends JFrame{
                     // Don't allow user to click Undo
                     undoBut.setEnabled(false);
                 }
-            } else if(e.getSource() == redoBut){
-                if((saveFiles - 1) > currentArticle){
+            } else if (e.getSource() == redoBut) {
+                if ((saveFiles - 1) > currentArticle) {
                     // Increment to the current article displayed
                     currentArticle++;
                     // Get the newer article saved and display it in JTextArea
-                    String textBoxString = originator.restoreFromMemento( caretaker.getMemento(currentArticle) );
+                    String textBoxString = originator.restoreFromMemento(caretaker.getMemento(currentArticle));
                     theArticle.setText(textBoxString);
                     // Make undo clickable
                     undoBut.setEnabled(true);

@@ -1,13 +1,13 @@
 package memento;
 
 // Memento Design Pattern
-public class Originator{
+public class Originator {
 
     private String article;
 
     // Sets the value for the article
     public void set(String newArticle) {
-        System.out.println("From Originator: Current Version of Article\n"+newArticle+ "\n");
+        System.out.println("From Originator: Current Version of Article\n" + newArticle + "\n");
         this.article = newArticle;
     }
 
@@ -20,7 +20,7 @@ public class Originator{
     // Gets the article currently stored in memento
     public String restoreFromMemento(Memento memento) {
         article = memento.getSavedArticle();
-        System.out.println("From Originator: Previous Article Saved in Memento\n"+article + "\n");
+        System.out.println("From Originator: Previous Article Saved in Memento\n" + article + "\n");
         return article;
     }
 
