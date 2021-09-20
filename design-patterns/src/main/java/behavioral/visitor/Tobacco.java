@@ -1,10 +1,10 @@
-package visitor;
+package behavioral.visitor;
 
-class Necessity implements Visitable {
+class Tobacco implements Visitable {
 
     private double price;
 
-    Necessity(double item) {
+    Tobacco(double item) {
         price = item;
     }
 

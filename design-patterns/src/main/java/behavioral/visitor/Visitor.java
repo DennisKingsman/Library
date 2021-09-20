@@ -1,6 +1,6 @@
-package visitor;
+package behavioral.visitor;
 
-// The visitor pattern is used when you have to perform
+// The behavioral.visitor pattern is used when you have to perform
 // the same action on many objects of different types
 interface Visitor {
 

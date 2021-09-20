@@ -118,7 +118,23 @@ Interpreter design pattern is one of the `behavioral` design pattern. Interprete
 [baeldung-interpreter](https://www.baeldung.com/java-interpreter-pattern)  
 [springframework.guru-interpreter](https://springframework.guru/gang-of-four-design-patterns/interpreter-pattern/)  
 Mediator  
-A Mediator is a `behavioral` design pattern that allows you to reduce the connectivity of many classes to each other by moving these connections into one intermediary class.
+A Mediator is a `behavioral` design pattern that allows you to reduce the connectivity of many classes to each other by moving these connections into one intermediary class.  
+Допустим есть два класса которые должны как то взаимодействовать с третьим для своих целей. Можно создать Медиатор, который будет лист из объектов этих двух "коллег" классов и дополнительные объекты третьего. "Коллеги" в свою очередь хранят ссылку на общий Медиатор и выполняют действия с третьим классом через нее.  
+[mediator](https://refactoring.guru/ru/design-patterns/mediator)  
+[mediator-2](http://cpp-reference.ru/patterns/behavioral-patterns/mediator/)  
+Memento  
+A Memento is a `behavioral` design pattern that allows you to save and restore the past states of objects without revealing the details of their implementation.  
+Есть класс "Моменто" состояния объекта которого надо сохранять. Есть класс который хранит в себе состояния. И есть класс который работает с "Моменто", создает новые и возвращает то что уже есть.  
+[memento](https://refactoring.guru/ru/design-patterns/memento)  
+Visitor  
+A `visitor` is a behavioral design pattern that allows you to add new operations to the program without changing the classes of objects on which these operations can be performed.  
+Есть несколько классов которые могут стать "визитуемыми" дополнительным поведением. Вместо того чтобы добавлять это поведение и менять эти классы им следует реализовывать интерфейс "Визитуемый" с одним методом принятия "Визита" в который передается "Визитор" и выполняет в нем метод "Визит".  В этот метод "Визит" передается ссылка на "визитируемый" объект. В свою очередь интерфейс "Визитор" определяет сигнатуру для нескольких разных "визитируемых" классов одно и того же метода "визит". (перегружает этот метод) В свою очередь реализации "Визитора" переопределяют эти методы. Реализаций может быть несколько и все они  могут быть приняты "визитируемым" объектом.  
+[visitor](https://refactoring.guru/ru/design-patterns/visitor)  
+MVC  
+Pattern or idea of three components: model, view and controller.  
+[mvc-design-pattern](https://www.geeksforgeeks.org/mvc-design-pattern/)  
+[habr-mvc](https://habr.com/ru/post/215605/)  
+[mvc-j-rush](https://javarush.ru/groups/posts/2536-chastjh-7-znakomstvo-s-patternom-mvc-model-view-controller)  
 ## Chapter 2 
 Json, xml  
 ## Chapter 3 

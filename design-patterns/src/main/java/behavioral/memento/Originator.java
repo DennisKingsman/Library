@@ -1,4 +1,4 @@
-package memento;
+package behavioral.memento;
 
 // Memento Design Pattern
 public class Originator {
@@ -17,7 +17,7 @@ public class Originator {
         return new Memento(article);
     }
 
-    // Gets the article currently stored in memento
+    // Gets the article currently stored in behavioral.memento
     public String restoreFromMemento(Memento memento) {
         article = memento.getSavedArticle();
         System.out.println("From Originator: Previous Article Saved in Memento\n" + article + "\n");

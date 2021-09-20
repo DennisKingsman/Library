@@ -1,4 +1,4 @@
-package mediator;
+package behavioral.mediator;
 
 public class StockOffer {
 

@@ -1,4 +1,4 @@
-package memento;
+package behavioral.memento;
 
 // Memento Design Pattern
 // Used stores an objects state at a point in time
@@ -6,10 +6,10 @@ package memento;
 // simply allows you to undo/redo changes on an Object
 public class Memento {
 
-    // The article stored in memento Object
+    // The article stored in behavioral.memento Object
     private String article;
 
-    // Save a new article String to the memento Object
+    // Save a new article String to the behavioral.memento Object
     public Memento(String articleSave) {
         article = articleSave;
     }

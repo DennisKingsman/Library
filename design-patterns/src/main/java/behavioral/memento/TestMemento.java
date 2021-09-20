@@ -1,4 +1,4 @@
-package memento;
+package behavioral.memento;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -19,8 +19,8 @@ public class TestMemento extends JFrame {
     Caretaker caretaker = new Caretaker();
 
     // The originator sets the value for the article,
-    // creates a new memento with a new article, and
-    // gets the article stored in the current memento
+    // creates a new behavioral.memento with a new article, and
+    // gets the article stored in the current behavioral.memento
     Originator originator = new Originator();
     int saveFiles = 0;
     int currentArticle = 0;
@@ -67,7 +67,7 @@ public class TestMemento extends JFrame {
             if (e.getSource() == saveBut) {
                 // Get text in JTextArea
                 String textInTextArea = theArticle.getText();
-                // Set the value for the current memento
+                // Set the value for the current behavioral.memento
                 originator.set(textInTextArea);
                 // Add new article to the ArrayList
                 caretaker.addMemento(originator.storeInMemento());
