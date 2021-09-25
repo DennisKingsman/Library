@@ -1,3 +1,8 @@
+#OOP Base
+
+#SOLID
+[SOLID](https://web-creator.ru/articles/solid)  
+[Active Record(not SOLID but used)](https://habr.com/ru/company/domclick/blog/515560/)  
 #Pattern types  
 `Generative` patterns are intended for creating instances of classes or objects.  
 `Structural` patterns are designed to organize various classes and objects to form larger structures and provide new functionality.  
