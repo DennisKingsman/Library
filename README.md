@@ -2,7 +2,7 @@
 ## DennisKingsman
 # Contents
 ## Chapter 1 
-OOP base, SOLID, ACID, design-patterns  
+OOP base, SOLID, design-patterns  
 [chapter-1 repo](https://github.com/DennisKingsman/Library/tree/master/design-patterns)  
 ## Chapter 2 
 Json, xml  
